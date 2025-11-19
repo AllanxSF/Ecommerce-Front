@@ -1,7 +1,5 @@
 import React from "react";
-import DynamicTexts from "../molecules/DynamicTexts";
 import Button from "../atoms/Button";
-import DynamicInputs from "../molecules/DynamicInput";
 
 function Forms({ content = [], className = "p-4" }) {
     return (

@@ -9,6 +9,7 @@ import Home from './pages/user/Home';
 import Login from './pages/auth/login';
 import CreateUser from './pages/auth/create-user';
 import HomeAdmin from './pages/admin/HomeAdmin';
+import Productos from './pages/user/Productos';
 
 function Layout() {
   const location = useLocation();
@@ -33,6 +34,8 @@ function Layout() {
           <Route path="/login" element={<Login />} />
           <Route path="/create-user" element={<CreateUser />} />
           <Route path="/admin/dashboard" element={<HomeAdmin />} />
+          <Route path="/productos" element={<Productos />} />
+
           <Route path="*" element={<div>404 - Página no encontrada</div>} />
         </Routes>
       </main>
