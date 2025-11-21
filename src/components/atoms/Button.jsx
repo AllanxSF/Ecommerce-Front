@@ -1,8 +1,16 @@
-import React from 'react';
-import { Button as BootstrapButton } from 'react-bootstrap';
+import React from "react";
 
-function Button({ children, ...props }) {
-  return <BootstrapButton {...props}>{children}</BootstrapButton>;
+function Button({ children, className = "", ...props }) {
+  return (
+    <button
+      className={`boton-base ${className}`}
+      {...props}
+    >
+      {children}
+    </button>
+  );
 }
 
 export default Button;
+
+

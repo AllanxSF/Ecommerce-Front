@@ -2,6 +2,7 @@ import { Routes, Route, useLocation } from 'react-router-dom';
 import { publicLinks } from './data/navbarPublicLinks';
 import { adminLinks } from './data/navbarAdminLinks';
 
+
 import Navbar from './components/organisms/Navbar';
 
 // Páginas
@@ -10,6 +11,9 @@ import Login from './pages/auth/login';
 import CreateUser from './pages/auth/create-user';
 import HomeAdmin from './pages/admin/HomeAdmin';
 import Productos from './pages/user/Productos';
+import DetalleProducto from "./pages/user/DetalleProducto";
+
+
 
 function Layout() {
   const location = useLocation();
@@ -35,6 +39,7 @@ function Layout() {
           <Route path="/create-user" element={<CreateUser />} />
           <Route path="/admin/dashboard" element={<HomeAdmin />} />
           <Route path="/productos" element={<Productos />} />
+          <Route path="/producto/:id" element={<DetalleProducto />} />
 
           <Route path="*" element={<div>404 - Página no encontrada</div>} />
         </Routes>
