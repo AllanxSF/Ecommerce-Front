@@ -37,6 +37,7 @@ function Layout() {
       )}
 
       <main>
+        <CartSidebar /> {/* SIEMPRE visible */}
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/login" element={<Login />} />
@@ -45,6 +46,7 @@ function Layout() {
           <Route path="/contacto" element={<Contacto />} />
           <Route path="/productos" element={<Productos />} />
           <Route path="/producto/:id" element={<DetalleProducto />} />
+          <Route path="/carrito" element={<Carrito />} />
 
           {/* Rutas Admin */}
           <Route path="/admin/dashboard" element={
