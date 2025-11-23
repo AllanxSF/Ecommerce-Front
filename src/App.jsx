@@ -14,12 +14,6 @@ import Nosotros from './pages/user/Nosotros';
 import DetalleProducto from './pages/user/DetalleProducto';
 import Footer from './components/organisms/Footer';
 import UsuarioAdmin from './pages/admin/UsuarioAdmin';
-
-
-
-
-
-
 import ProductoAdmin from "./pages/admin/ProductoAdmin";
 import ProductoEditAdmin from "./pages/admin/ProductoEditAdmin";
 
@@ -55,6 +49,8 @@ function Layout() {
           {/* Rutas Admin */}
           <Route path="/admin/dashboard" element={<HomeAdmin />} />
           <Route path="/admin/usuarios" element={<UsuarioAdmin />} />
+          <Route path="/admin/productos" element={<ProductoAdmin />} />
+          <Route path="/admin/producto/:id" element={<ProductoEditAdmin />} />
 
           <Route path="*" element={<div>404 - Página no encontrada</div>} />
         </Routes>
