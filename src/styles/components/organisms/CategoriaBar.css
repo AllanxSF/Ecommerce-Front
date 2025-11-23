@@ -1,0 +1,35 @@
+.categoria-filter-bar {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start; 
+  padding-left: 40px; 
+  margin-top: 15px;
+  margin-bottom: 10px;
+}
+
+.categoria-filter {
+  display: flex;
+  gap: 12px;
+}
+
+.categoria-filter select {
+  padding: 8px 14px;
+  font-size: 14px;
+
+  border-radius: 6px;
+  border: 1px solid #cc3366;
+  background-color: #ffe5ef;
+  color: #7a1147;
+
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.categoria-filter select:hover {
+  background-color: #f8d1e1;
+}
+
+.categoria-filter select:focus {
+  outline: none;
+  border-color: #b02a57;
+}
