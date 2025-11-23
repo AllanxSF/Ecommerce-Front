@@ -12,6 +12,8 @@ import Productos from './pages/user/Productos';
 import Contacto from './pages/user/Contacto';
 import Nosotros from './pages/user/Nosotros';
 import DetalleProducto from './pages/user/DetalleProducto';
+import Footer from './components/organisms/Footer';
+import UsuarioAdmin from './pages/admin/UsuarioAdmin';
 
 function Layout() {
   const location = useLocation();
@@ -41,8 +43,14 @@ function Layout() {
           <Route path="/productos" element={<Productos />} />
           <Route path="/producto/:id" element={<DetalleProducto />} />
 
+          {/* Rutas Admin */}
+          <Route path="/admin/dashboard" element={<HomeAdmin />} />
+          <Route path="/admin/usuarios" element={<UsuarioAdmin />} />
+
           <Route path="*" element={<div>404 - Página no encontrada</div>} />
         </Routes>
+
+        <Footer />
       </main>
     </>
   );
