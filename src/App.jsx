@@ -13,6 +13,15 @@ import Contacto from './pages/user/Contacto';
 import Nosotros from './pages/user/Nosotros';
 import DetalleProducto from './pages/user/DetalleProducto';
 
+
+
+
+
+
+import ProductoAdmin from "./pages/admin/ProductoAdmin";
+import ProductoEditAdmin from "./pages/admin/ProductoEditAdmin";
+
+
 function Layout() {
   const location = useLocation();
 
@@ -40,6 +49,16 @@ function Layout() {
           <Route path="/contacto" element={<Contacto />} />
           <Route path="/productos" element={<Productos />} />
           <Route path="/producto/:id" element={<DetalleProducto />} />
+
+
+
+
+
+
+
+          <Route path="/admin/productos" element={<ProductoAdmin />} />
+          <Route path="/admin/producto/:id" element={<ProductoEditAdmin />} />
+
 
           <Route path="*" element={<div>404 - Página no encontrada</div>} />
         </Routes>
