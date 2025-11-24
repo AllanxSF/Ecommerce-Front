@@ -1,4 +1,3 @@
-
 import { Link } from "react-router-dom";
 
 const loginData = [
@@ -13,6 +12,7 @@ const loginData = [
         ]
     },
 
+    
     {
         type: "text",
         text: [

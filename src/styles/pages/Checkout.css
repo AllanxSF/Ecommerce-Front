@@ -1,0 +1,156 @@
+.checkout-container {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+.checkout-title {
+    font-size: 36px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.checkout-section {
+    margin-bottom: 35px;
+}
+
+.checkout-box {
+    background: #fff;
+    padding: 20px;
+    border-radius: 12px;
+    border: 1px solid #f0b6d9;
+    font-size: 18px;
+}
+
+.total-box {
+    display: flex;
+    justify-content: space-between;
+}
+
+.checkout-total {
+    font-size: 24px;
+    font-weight: bold;
+    color: #e91e63;
+}
+
+.metodos-container {
+    display: grid;
+    gap: 15px;
+}
+
+.metodo-card {
+    background: #ff99c8;
+    padding: 18px;
+    border-radius: 12px;
+    text-align: center;
+    font-size: 20px;
+    cursor: pointer;
+    color: white;
+    transition: 0.2s;
+}
+
+.metodo-card:hover {
+    background: #ff5fa8;
+    transform: translateY(-3px);
+}
+
+.checkout-pay-btn {
+    width: 100%;
+    padding: 18px;
+    font-size: 20px;
+    background: #ff4ca3;
+    color: white;
+    border: none;
+    border-radius: 12px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: 0.2s;
+}
+
+.checkout-pay-btn:hover {
+    background: #e7378d;
+}
+
+.metodo-card.selected {
+    border: 3px solid #ff4ca3;
+    background-color: #ffb3d9;
+}
+
+/* CONTENEDOR */
+.checkout-section {
+    margin-top: 30px;
+}
+
+.checkout-subtitle {
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: #d63384;
+    margin-bottom: 15px;
+}
+
+/* CAJA DEL TOTAL */
+.total-box {
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 2px 8px rgba(255, 0, 128, 0.15);
+    font-size: 1.3rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* TOTAL */
+.checkout-total {
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: #ff007f;
+}
+
+.checkout-select {
+    width: 100%;
+    padding: 15px;
+    border-radius: 12px;
+    border: 2px solid #ff87c1;
+    background: #fff0f6;
+    color: #333;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.checkout-select:hover {
+    border-color: #ff4fa7;
+    background: #ffe3f0;
+}
+
+.checkout-select:focus {
+    outline: none;
+    border-color: #ff007f;
+    box-shadow: 0 0 10px rgba(255, 0, 128, 0.25);
+}
+
+.checkout-pay-btn {
+    width: 100%;
+    margin-top: 30px;
+    padding: 18px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 12px;
+    background: #ff2fa2;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.checkout-pay-btn:hover {
+    background: #e6007e;
+    transform: translateY(-2px);
+}
+
+.checkout-pay-btn:active {
+    background: #c2006b;
+    transform: translateY(0);
+}

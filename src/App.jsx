@@ -3,7 +3,6 @@ import { publicLinks } from './data/navbarPublicLinks';
 import { adminLinks } from './data/navbarAdminLinks';
 import Navbar from './components/organisms/Navbar';
 
-// Páginas
 import Home from './pages/user/Home';
 import Login from './pages/auth/login';
 import CreateUser from './pages/auth/create-user';
@@ -19,14 +18,13 @@ import ProductoEditAdmin from "./pages/admin/ProductoEditAdmin";
 import Config from './routes/config';
 import Carrito from './pages/user/Carrito';
 import CartSidebar from './components/organisms/CartSidebar';
+import CarritoAdmin from './pages/admin/CarritoAdmin';
+import Checkout from './pages/user/Checkout';
 
 
 function Layout() {
   const location = useLocation();
-
-  // Rutas donde NO se muestra el NavbarPublic
   const hideNavbarRoutes = ['/create-user'];
-
   const isAdminRoute = location.pathname.startsWith('/admin');
   const shouldShowNavbarPublic = !isAdminRoute && !hideNavbarRoutes.includes(location.pathname);
 
@@ -39,7 +37,7 @@ function Layout() {
       )}
 
       <main>
-        <CartSidebar /> {/* SIEMPRE visible */}
+        <CartSidebar />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/login" element={<Login />} />
@@ -49,8 +47,7 @@ function Layout() {
           <Route path="/productos" element={<Productos />} />
           <Route path="/producto/:id" element={<DetalleProducto />} />
           <Route path="/carrito" element={<Carrito />} />
-
-          {/* Rutas Admin */}
+          <Route path="/checkout" element={<Checkout />} />
           <Route path="/admin/dashboard" element={
             <Config>
               <HomeAdmin />
@@ -62,6 +59,7 @@ function Layout() {
               <UsuarioAdmin />
             </Config>
           } />
+          
 
           <Route path="/admin/productos" element={
             <Config>
@@ -74,6 +72,13 @@ function Layout() {
               <ProductoEditAdmin/>
             </Config>
           } />
+
+          <Route path="/admin/carritos" element={
+            <Config>
+              <CarritoAdmin />
+            </Config>
+          } />
+
 
           <Route path="*" element={<div>404 - Página no encontrada</div>} />
         </Routes>

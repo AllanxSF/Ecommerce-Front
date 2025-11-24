@@ -1,11 +1,26 @@
 import React, { useContext } from "react";
 import { CartContext } from "../../context/CartContext";
 import CartItem from "../../components/molecules/CartItem";
+import { useNavigate } from "react-router-dom";
 import "../../styles/pages/Carrito.css";
 
 const Carrito = () => {
   const { cart, totalPrice, increase, decrease, removeFromCart } =
     useContext(CartContext);
+
+  const navigate = useNavigate();
+
+  const handleIrCheckout = () => {
+    const user = JSON.parse(localStorage.getItem("user"));
+
+    if (!user) {
+      alert("Debes iniciar sesión para continuar");
+      navigate("/login");
+      return;
+    }
+
+    navigate("/checkout");
+  };
 
   return (
     <div className="cart-page">
@@ -32,7 +47,10 @@ const Carrito = () => {
             <p>
               Total: <strong>${totalPrice}</strong>
             </p>
-            <button className="cart-page-pay">Finalizar compra</button>
+
+            <button className="cart-page-pay" onClick={handleIrCheckout}>
+              Finalizar compra
+            </button>
           </div>
         </>
       )}

@@ -35,6 +35,8 @@ const CartSidebar = () => {
           })),
         }
       );
+      console.log("Respuesta del backend:", response.data);
+
 
       const urlPago = response.data.init_point;
       window.location.href = urlPago;
