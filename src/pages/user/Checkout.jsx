@@ -59,7 +59,6 @@ export default function Checkout() {
         <div className="checkout-container">
             <h1 className="checkout-title">Finalizar compra</h1>
 
-            {/* DATOS DEL COMPRADOR */}
             <section className="checkout-section">
                 <h2>Datos del comprador</h2>
                 <div className="checkout-box">
@@ -68,7 +67,6 @@ export default function Checkout() {
                 </div>
             </section>
 
-            {/* DIRECCIÓN */}
             <section className="checkout-section">
                 <h2>Dirección de despacho</h2>
                 <div className="checkout-box">
@@ -80,7 +78,6 @@ export default function Checkout() {
                 </div>
             </section>
 
-            {/* MÉTODOS DE PAGO */}
             <section className="checkout-section">
                 <h2>Métodos de pago</h2>
 
@@ -99,7 +96,6 @@ export default function Checkout() {
                 </select>
             </section>
 
-            {/* RESUMEN DEL PEDIDO */}
             <section className="checkout-section">
                 <h2>Resumen del pedido</h2>
 
@@ -109,7 +105,6 @@ export default function Checkout() {
                 </div>
             </section>
 
-            {/* BOTÓN FINAL */}
             <button className="checkout-pay-btn" onClick={handlePagar}>
                 PAGAR
             </button>
