@@ -23,7 +23,6 @@ const CartSidebar = () => {
     navigate("/carrito");
   };
 
-  // FUNCIÓN PARA INICIAR PAGO
   const handleCheckout = async () => {
     try {
       const response = await axios.post(
@@ -38,7 +37,7 @@ const CartSidebar = () => {
       );
 
       const urlPago = response.data.init_point;
-      window.location.href = urlPago; // REDIRIGE AL CHECKOUT DE MERCADO PAGO
+      window.location.href = urlPago;
 
     } catch (error) {
       console.error("Error al iniciar pago:", error);
@@ -82,7 +81,6 @@ const CartSidebar = () => {
             Ver carrito completo
           </button>
 
-          {/*ESTE ES EL BOTÓN DE PAGO */}
           <button className="pay-btn" onClick={handleCheckout}>
             Finalizar Compra
           </button>
