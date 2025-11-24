@@ -1,35 +1,40 @@
+
 .categoria-filter-bar {
   width: 100%;
   display: flex;
-  justify-content: flex-start; 
-  padding-left: 40px; 
+  justify-content: flex-start;
+  padding-left: 40px;
   margin-top: 15px;
   margin-bottom: 10px;
 }
 
-.categoria-filter {
-  display: flex;
-  gap: 12px;
-}
-
-.categoria-filter select {
-  padding: 8px 14px;
+.filtro-select {
+  padding: 8px 16px;
   font-size: 14px;
+  
+  border: 2px solid #cc3366;
+  border-radius: 8px;
 
-  border-radius: 6px;
-  border: 1px solid #cc3366;
-  background-color: #ffe5ef;
+  background-color: #ffffff;
   color: #7a1147;
 
   cursor: pointer;
-  transition: 0.2s;
+  transition: 0.2s ease;
 }
 
-.categoria-filter select:hover {
-  background-color: #f8d1e1;
+.filtro-select:hover {
+  background-color: #ffe5ef;
 }
 
-.categoria-filter select:focus {
+.filtro-select:focus {
   outline: none;
   border-color: #b02a57;
+  box-shadow: 0 0 4px rgba(176, 42, 87, 0.5);
+}
+
+.filtro-select:disabled {
+  background-color: #f7d8e3;
+  border-color: #d48aa3;
+  color: #9d6b7c;
+  cursor: not-allowed;
 }
