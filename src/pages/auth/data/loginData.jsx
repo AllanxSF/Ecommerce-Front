@@ -13,7 +13,6 @@ const loginData = [
         ]
     },
 
-    // 🔥 TEXTO: ¿No tienes cuenta? Regístrate aquí
     {
         type: "text",
         text: [

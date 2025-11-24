@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import { NavLink, useNavigate } from 'react-router-dom';
 import "../../styles/components/organisms/Navbar.css";
 import CartButton from "../atoms/CartButton";
+import BuscarBar from "../molecules/BuscarBar";
 
 function Navbar({ links, title }) {
   const [isOpen, setIsOpen] = useState(false);
@@ -18,7 +19,7 @@ function Navbar({ links, title }) {
   };
 
   const handleLinkClick = (e, link) => {
-    if (link.label === "Salir") {
+    if (link.label === "Salir") { 
       e.preventDefault();
       handleLogout();
     } else {
@@ -34,13 +35,11 @@ function Navbar({ links, title }) {
     <nav className="navbar-container">
       <div className="navbar-inner">
 
-        {/* IZQUIERDA: LOGO */}
         <div className="nav-left">
           <img src="/logo.png" alt="Logo" className="nav-logo" />
           <h1 className="nav-brand">미지 <span>Beauty</span></h1>
         </div>
 
-        {/* MENÚ CENTRAL */}
         <div className="nav-menu">
           {links.map((link, i) => (
             <NavLink
@@ -62,18 +61,12 @@ function Navbar({ links, title }) {
           )}
         </div>
 
-        {/* DERECHA */}
         <div className="nav-right">
 
-          {/* 🔥 OCULTAR BUSCADOR Y CARRITO SI ES ADMIN */}
           {!isAdmin && (
-            <>
-              <input type="text" placeholder="Buscar..." className="nav-search" />
-              <button className="btn-search">Buscar</button>
-            </>
+            <BuscarBar onBuscar={(query) => navigate(`/productos?search=${query}`)} />
           )}
 
-          {/* BOTÓN CUENTA O SALIR */}
           {!user ? (
             <button className="btn-account" onClick={goToLogin}>
               Mi Cuenta
