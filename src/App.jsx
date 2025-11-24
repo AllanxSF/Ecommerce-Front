@@ -19,6 +19,7 @@ import Config from './routes/config';
 import Carrito from './pages/user/Carrito';
 import CartSidebar from './components/organisms/CartSidebar';
 import CarritoAdmin from './pages/admin/CarritoAdmin';
+import Checkout from './pages/user/Checkout';
 
 
 function Layout() {
@@ -46,6 +47,7 @@ function Layout() {
           <Route path="/productos" element={<Productos />} />
           <Route path="/producto/:id" element={<DetalleProducto />} />
           <Route path="/carrito" element={<Carrito />} />
+          <Route path="/checkout" element={<Checkout />} />
           <Route path="/admin/dashboard" element={
             <Config>
               <HomeAdmin />

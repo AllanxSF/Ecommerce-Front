@@ -1,43 +1,26 @@
 import React, { useContext } from "react";
 import { CartContext } from "../../context/CartContext";
 import CartItem from "../../components/molecules/CartItem";
-import CarritoService from "../../services/CarritoService";
+import { useNavigate } from "react-router-dom";
 import "../../styles/pages/Carrito.css";
 
 const Carrito = () => {
   const { cart, totalPrice, increase, decrease, removeFromCart } =
     useContext(CartContext);
 
-  
-  const handleFinalizarCompra = async () => {
+  const navigate = useNavigate();
+
+  const handleIrCheckout = () => {
     const user = JSON.parse(localStorage.getItem("user"));
 
     if (!user) {
-      alert("Debes iniciar sesión para comprar");
+      alert("Debes iniciar sesión para continuar");
+      navigate("/login");
       return;
     }
 
-    // Construimos el carrito
-    const nuevoCarrito = {
-      usuario: {
-        id: user.id,
-      },
-      fechaCreacion: new Date().toISOString(),
-      estado: { estadoId: 1 },          // Pendiente
-      metodoPago: { metodoPagoId: 1 },  // Sin pago real
-      detalleCarrito: JSON.stringify(cart),
-      total: totalPrice,
-    };
-
-    try {
-      await CarritoService.create(nuevoCarrito);
-      alert("Compra registrada correctamente.");
-    } catch (error) {
-      console.error(error);
-      alert("Ocurrió un error al guardar el carrito");
-    }
+    navigate("/checkout");
   };
-  
 
   return (
     <div className="cart-page">
@@ -65,8 +48,7 @@ const Carrito = () => {
               Total: <strong>${totalPrice}</strong>
             </p>
 
-          
-            <button className="cart-page-pay" onClick={handleFinalizarCompra}>
+            <button className="cart-page-pay" onClick={handleIrCheckout}>
               Finalizar compra
             </button>
           </div>
