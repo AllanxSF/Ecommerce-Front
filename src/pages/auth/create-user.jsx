@@ -77,7 +77,6 @@ const CreateUser = () => {
 
             generarMensaje("Usuario registrado correctamente", "success");
 
-            // Limpiar formulario
             setForm({
                 nombre: "",
                 direccion: "",
@@ -100,9 +99,6 @@ const CreateUser = () => {
         }
     };
 
-    // -------------------------------
-    // 🔧   FORM DATA (para <Forms />)
-    // -------------------------------
     const formData = [
         {
             type: "text",
@@ -175,7 +171,6 @@ const CreateUser = () => {
             ]
         },
 
-        // SELECT COMUNAS
         { type: "label", text: [{ content: "Comuna:*", className: "register-label" }] },
         {
             type: "inputs",
@@ -227,10 +222,8 @@ const CreateUser = () => {
             ]
         },
 
-        // BOTÓN
         { type: "submit", text: "Registrar", className: "register-btn" },
 
-        // LINK
         {
             type: "text",
             text: [
