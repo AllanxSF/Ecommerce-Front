@@ -40,15 +40,18 @@
 
 /* IMÁGENES */
 .nosotros-img {
-    width: 650px;
-    max-width: 100%;
+    width: 100%;
+    max-width: 650px; 
+    border-radius: 14px;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
 }
 
 .nosotros-img img {
     width: 100%;
+    height: auto;
+    object-fit: cover;
     border-radius: 15px;
     display: block;
-    object-fit: cover;
 }
 
 /* TEXTO */
